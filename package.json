@@ -1,0 +1,25 @@
+{
+  "name": "balena-sdk-scripts",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tmigone/balena-sdk-scripts.git"
+  },
+  "author": "Tomás Migone <tomasmigone@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tmigone/balena-sdk-scripts/issues"
+  },
+  "homepage": "https://github.com/tmigone/balena-sdk-scripts#readme",
+  "dependencies": {
+    "balena-sdk": "^15.35.1"
+  },
+  "devDependencies": {
+    "standard": "^16.0.3"
+  }
+}
