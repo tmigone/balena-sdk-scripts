@@ -6,19 +6,27 @@ const balena = getSdk({
   apiUrl: 'https://api.balena-cloud.com/'
 })
 
-const appId = 1767644
-const version = '3.5.3'
+const appId = 1677085
+const version = '2.0.0'
 
 async function run () {
   try {
     await balena.auth.loginWithToken(BALENA_API_TOKEN)
 
     const result = await balena.pine.get({
-      resource: 'release',
+      resource: 'application',
       options: {
+        $expand: {
+          owns__public_device: {
+            $select: ['was_recently_online']
+          }
+        },
         $filter: {
-          belongs_to__application: appId,
-          release_version: version
+          is_public: true,
+          is_discoverable: true,
+          is_host: false,
+          is_of__class: 'fleet',
+          is_stored_at__repository_url: { $ne: null }
         }
       }
     })
