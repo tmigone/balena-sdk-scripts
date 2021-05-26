@@ -17,7 +17,8 @@
   },
   "homepage": "https://github.com/tmigone/balena-sdk-scripts#readme",
   "dependencies": {
-    "balena-sdk": "^15.35.1"
+    "balena-sdk": "^15.35.1",
+    "yesno": "^0.3.1"
   },
   "devDependencies": {
     "standard": "^16.0.3"
