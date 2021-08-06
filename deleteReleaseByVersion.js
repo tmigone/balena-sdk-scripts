@@ -7,8 +7,8 @@ const balena = getSdk({
   apiUrl: 'https://api.balena-cloud.com/'
 })
 
-const appId = 1832606
-const version = '3.6.0'
+const appId = 1837171
+const version = '3.6.2'
 
 async function run () {
   try {
